@@ -6,6 +6,20 @@
 
 /* Sidebar */
 
+	.logo {
+		position: absolute;
+
+		@include breakpoint('>medium') {
+			width: 100%;
+			top: 20px;
+		}
+		@include breakpoint('<=medium') {
+			left: 20px;
+			height: 90px;
+			margin-top: 3px;
+		}
+	}
+
 	#sidebar {
 		@include padding(2.5em, 2.5em);
 		background: _palette(bg);
@@ -130,7 +144,7 @@
 			}
 		}
 
-		@include breakpoint('<=large') {
+		@include breakpoint('<=medium') {
 			height: _size(sidebar-height);
 			left: 0;
 			line-height: _size(sidebar-height);
